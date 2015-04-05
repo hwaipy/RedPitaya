@@ -138,5 +138,5 @@ extern const double  c_awg_smpl_freq;
 
 int fpga_awg_init(void);
 int fpga_awg_exit(void);
-
+float fpga_awg_calc_dac_max_v(uint32_t be_gain_fs);
 #endif // _FPGA_AWG_H_

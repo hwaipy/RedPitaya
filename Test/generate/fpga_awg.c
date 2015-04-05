@@ -166,3 +166,13 @@ int fpga_awg_exit(void)
 {
     return __awg_cleanup_mem();
 }
+
+float fpga_awg_calc_dac_max_v(uint32_t be_gain_fs)
+{
+    float max_dac_v;
+
+    max_dac_v =
+        be_gain_fs/(float)((uint64_t)1<<32) * 100;
+
+    return max_dac_v;
+}
